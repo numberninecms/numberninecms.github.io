@@ -1,0 +1,134 @@
+<template>
+  <Layout>
+    <div class="pt-8 md:pt-16">
+      <div class="flex flex-col items-center">
+        <h1 class="flex flex-col items-center mb-2 text-ui-primary">
+          <Logo :width="512" with-text />
+        </h1>
+        <span class="text-2xl text-center lg:text-2xl font-bold">
+          Every good business needs a good CMS software
+        </span>
+
+        <p class="pt-8 xl:w-3/4 lg:w-5/6 text-center">
+          NumberNine CMS is a new generation CMS aimed to simplify the creation of websites with Symfony.
+          Whatever website or application you're creating, this is the tool you've always wished for.
+        </p>
+
+        <p class="p-1 text-center bg-orange-600 text-white rounded inline-block font-bold">
+          ⚠ This project is still in pre-alpha state ⚠
+        </p>
+
+        <div class="flex justify-center mt-8">
+          <g-link
+            to="/docs/"
+            class="flex items-center px-6 py-4 ml-auto text-2xl font-bold leading-none text-white border rounded-lg shadow-lg bg-ui-primary border-ui-primary transition-all duration-200 ease-out transform hover:shadow-xl hover:-translate-y-1"
+          >
+            Get started
+            <ArrowRightCircleIcon class="ml-4" size="1x" />
+          </g-link>
+        </div>
+
+        <p class="mt-8 text-center">
+          Open Source. MIT License.
+        </p>
+
+      </div>
+
+      <div class="pt-8 mx-auto mt-8 border-t md:mt-8 md:pt-8 border-top border-ui-border max-w-screen-sm"></div>
+
+      <div class="flex flex-wrap justify-center -mx-4">
+        <div class="flex flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
+          <CodeIcon size="3x" class="mb-6 text-ui-primary" />
+          <h3 class="font-bold tracking-wide uppercase text-ui-primary">
+            Top frameworks
+          </h3>
+          <p class="text-lg text-left">
+            Built with Symfony and Quasar, the two most powerful frameworks on the market. NumberNine CMS make them work together
+            to deliver the best user experience and robustness your website needs.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
+          <LayoutIcon size="3x" class="mb-6 text-ui-primary" />
+          <h3 class="font-bold tracking-wide uppercase text-ui-primary">
+            Page builder
+          </h3>
+          <p class="text-lg text-left">
+            Create pages, blog articles or any content with the built-in page builder and its dozens of predesigned blocks.
+            Extend default theme to change the look and feel of the components. Make your blocks featuring your business objects.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
+          <ImageIcon size="3x" class="mb-6 text-ui-primary" />
+          <h3 class="font-bold tracking-wide uppercase text-ui-primary">
+            Media library
+          </h3>
+          <p class="text-lg text-left">
+            A great media management tool is the key to productivity. Enjoy using the very reactive media library, with integrated image editing tools.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </Layout>
+</template>
+
+<script>
+import Logo from '@/components/Logo';
+import { ArrowRightCircleIcon, ZapIcon, CodeIcon, MoonIcon, SearchIcon, LayoutIcon, ImageIcon } from 'vue-feather-icons';
+
+export default {
+  components: {
+    Logo,
+    ArrowRightCircleIcon,
+    ZapIcon,
+    CodeIcon,
+    MoonIcon,
+    SearchIcon,
+    LayoutIcon,
+    ImageIcon,
+  },
+
+  metaInfo() {
+    const title = 'NumberNine CMS - Every good business needs a good CMS software';
+    const description = 'NumberNine CMS is a new generation CMS aimed to simplify the creation of websites with Symfony.';
+
+    return {
+      title: title,
+      meta: [
+        {
+          name: 'description',
+          content: description
+        },
+        {
+          key: 'og:title',
+          name: 'og:title',
+          content: title,
+        },
+        {
+          key: 'twitter:title',
+          name: 'twitter:title',
+          content: title,
+        },
+        {
+          key: 'og:description',
+          name: 'og:description',
+          content: description,
+        },
+        {
+          key: 'twitter:description',
+          name: 'twitter:description',
+          content: description,
+        },
+      ]
+    }
+  }
+}
+</script>
+
+<style>
+.home-links a {
+  margin-right: 1rem;
+}
+</style>
