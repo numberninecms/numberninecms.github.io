@@ -10,7 +10,7 @@
         </span>
 
         <p class="pt-8 xl:w-3/4 lg:w-5/6 text-center">
-          NumberNine CMS is a new generation CMS aimed to simplify the creation of websites with Symfony.
+          NumberNine is a new generation CMS aimed to simplify the creation of websites with Symfony.
           Whatever website or application you're creating, this is the tool you've always wished for.
         </p>
 
