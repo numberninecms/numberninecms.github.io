@@ -1,5 +1,5 @@
 ---
-description: ''
+description: 'Screenshots of NumberNine frontend and admin panel'
 sidebar: 'docs'
 prev: '/docs/'
 next: '/docs/installation/'

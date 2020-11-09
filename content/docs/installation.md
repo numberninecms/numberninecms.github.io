@@ -1,5 +1,5 @@
 ---
-description: ''
+description: 'Installation instructions'
 sidebar: 'docs'
 prev: '/docs/screenshots/'
 ---
@@ -8,22 +8,19 @@ prev: '/docs/screenshots/'
 
 _**Note:** for now there's only a demo project with fixture data as NumberNine is still in development. This will be improved._
 
-**Requirements to install NumberNine:**
-* [Composer 2](https://getcomposer.org/download/)
-* [Symfony executable](https://symfony.com/download)
-* make ([Windows version](http://gnuwin32.sourceforge.net/packages/make.htm))
-
-
 ## Docker (recommended)
 
-To use Docker with NumberNine you need to install `composer`, `make` and `yarn` on your host (WSL, Ubuntu, MacOS, Windows...) as Docker will only serve your application. Files stay on your host.
+You don't need to be familiar with Docker. Everything is taken care of for you.
+Just [download and install it](https://www.docker.com/products/docker-desktop).
 
 ### Create the project
 
-To create a new project with NumberNine, simply run:
+To create a new project, simply replace `my_project` by the name of your project and run:
 
 ```bash
-composer create-project numberninecms/demo:dev-develop my_project
+docker run --rm -it -u '1000:1000' -v $PWD:/app numberninecms/php:7.4-fpm-dev \
+    composer create-project --ignore-platform-reqs --no-scripts \
+    numberninecms/demo:dev-develop my_project
 ```
 
 ### Build containers and install
@@ -34,7 +31,7 @@ Go to your new project root and run:
 make docker-install
 ```
 
-Done. Now visit <a href="http://localhost/" target="_blank">http://localhost/</a>.
+Done. Now visit <a href="https://localhost/" target="_blank">https://localhost/</a>.
 
 If you want another domain or port, run:
 
@@ -44,10 +41,13 @@ SERVER_NAME=mydomain.wip NGINX_PORT=8080 docker-compose up
 
 ## Windows / Linux / WSL installation
 
-**To install on your host, here are some additional requirements:**
+**Requirements to install NumberNine:**
 
-* MySQL 8.0 or above
-* Redis
+* [MySQL 8.0](https://www.mysql.com/downloads/) or above
+* [Redis](https://redis.io/download) and `redis` PHP extension ([Windows version](https://pecl.php.net/package/redis))
+* [Composer 2](https://getcomposer.org/download/)
+* [Symfony executable](https://symfony.com/download)
+* `make` ([Windows version](http://gnuwin32.sourceforge.net/packages/make.htm))
 
 ### Create the project
 

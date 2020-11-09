@@ -1,5 +1,5 @@
 ---
-description: ''
+description: 'Introduction to NumberNine'
 sidebar: 'docs'
 next: '/docs/screenshots/'
 ---
