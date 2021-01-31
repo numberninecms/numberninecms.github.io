@@ -2,6 +2,7 @@
 description: 'Installation instructions'
 sidebar: 'docs'
 prev: '/docs/screenshots/'
+next: '/docs/first-steps/'
 ---
 
 # Installation
@@ -44,7 +45,8 @@ To create a new project with NumberNine, simply run:
 ```bash
 symfony new my_project --full
 composer config extra.symfony.allow-contrib true
-composer req numberninecms/numbernine
+SYMFONY_ENDPOINT=https://flex.symfony.com/r/github.com/symfony/recipes-contrib/1049 \
+    composer req numberninecms/numbernine
 ```
 
 ### Launch installation
@@ -69,11 +71,3 @@ symfony serve -d
 ```
 
 You're done. Visit https://localhost:8080/ or the given URL if different.
-
-
-## Quick start
-
-Either login by clicking the top right "Login/Register" link, or by accessing `/admin/`.
-
-Demo admin login: **admin**<br/>
-Demo admin password: **password**

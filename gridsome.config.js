@@ -30,6 +30,7 @@ module.exports = {
               '/docs/',
               '/docs/screenshots/',
               '/docs/installation/',
+              '/docs/first-steps/',
             ]
           }
         ]
