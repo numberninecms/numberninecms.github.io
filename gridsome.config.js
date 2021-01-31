@@ -32,7 +32,13 @@ module.exports = {
               '/docs/installation/',
               '/docs/first-steps/',
             ]
-          }
+          },
+          {
+            title: 'Tooling',
+            items: [
+              '/docs/docker/',
+            ]
+          },
         ]
       }
     ]

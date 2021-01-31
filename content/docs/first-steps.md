@@ -1,7 +1,8 @@
 ---
-description: 'First stepps'
+description: 'First steps'
 sidebar: 'docs'
 prev: '/docs/installation/'
+next: '/docs/docker/'
 ---
 
 # First steps
