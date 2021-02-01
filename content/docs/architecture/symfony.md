@@ -1,5 +1,5 @@
 ---
-description: 'Architecture overview'
+description: 'Symfony 5.1+'
 sidebar: 'docs'
 prev: '/docs/docker/'
 next: '/docs/architecture/user-management/'
@@ -27,6 +27,18 @@ NumberNine makes extensive use of Symfony's event dispatcher to allow extending 
 from your own code without having to modify the core code.
 
 You'll be able to add or modify user capabilities, route templates, custom post types, and much more.
+
+## Micro-controllers
+
+In a classic Symfony application, a page is rendered with a single controller and a single template.
+It's fine, but hardly reusable.
+
+In NumberNine, you can create **components** and **shortcodes** that will handle a small region of
+your page with an isolated controller and a specific template for this region, with virtually no
+performance impact.
+
+[Learn more about theming...](/docs/architecture/theming/)
+
 
 ## Custom routes
 

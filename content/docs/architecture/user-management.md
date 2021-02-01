@@ -2,6 +2,7 @@
 description: 'User management'
 sidebar: 'docs'
 prev: '/docs/architecture/symfony/'
+next: '/docs/architecture/theming/'
 ---
 
 # User management

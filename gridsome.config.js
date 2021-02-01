@@ -44,6 +44,13 @@ module.exports = {
             items: [
               '/docs/architecture/symfony/',
               '/docs/architecture/user-management/',
+              '/docs/architecture/theming/',
+            ]
+          },
+          {
+            title: 'How to',
+            items: [
+              '/docs/howto/theming/create-a-component/',
             ]
           },
         ]

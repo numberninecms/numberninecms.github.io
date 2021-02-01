@@ -2,7 +2,7 @@
 description: 'Docker services'
 sidebar: 'docs'
 prev: '/docs/first-steps/'
-next: '/docs/architecture/overview/'
+next: '/docs/architecture/symfony/'
 ---
 
 # Docker services
