@@ -61,6 +61,9 @@ In the above examples, `content_type_name` can be `post`, `page`, `product` or a
 A component is a **micro-controller** to which you'll **delegate the rendering of a region of your page**.
 It's similar to including another template in your Twig template, but with **PHP logic** in between.
 
+This feature is aimed to help developers to write better code by splitting what could be a huge controller into
+many little controllers who handle one concern at a time.
+
 You don't have to use components if you don't want to.
 
 [Learn how to create and use a component...](/docs/howto/theming/create-a-component/)
@@ -69,6 +72,23 @@ You don't have to use components if you don't want to.
 
 Also known as BBcodes, shortcodes are widely used in CMS softwares like WordPress or Drupal.
 
+While the purpose of a component is purely developer-oriented, the shortcode is purely user-oriented.
+They are meant to give the opportunity to the end user, who doesn't know how to code, to customize
+its website pages with dynamic components represented by a text string.
+
+As an example, a user could type the following text in the page editor:
+
+```
+What a great day today in Paris.
+[weather location="Paris"]
+```
+
+The part `[weather location="Paris"]` is a shortcode, named `weather` with one parameter `location` whose
+value is `Paris`. When the page renders, shortcodes are interpreted and obviously not presented to the visitors
+like this, but rendered with a dedicated template.
+
+Now what's interesting in NumberNine is that shortcodes are, just like components, **isolated micro-controllers
+running as services**.
 
 ## Page builder
 
