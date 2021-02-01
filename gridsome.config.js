@@ -39,6 +39,13 @@ module.exports = {
               '/docs/docker/',
             ]
           },
+          {
+            title: 'Architecture',
+            items: [
+              '/docs/architecture/symfony/',
+              '/docs/architecture/user-management/',
+            ]
+          },
         ]
       }
     ]

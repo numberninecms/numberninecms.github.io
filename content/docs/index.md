@@ -47,9 +47,11 @@ don't include code that isn't yours. NumberNine gives you an empty `/src` direct
 You can still use Symfony the way you're used too. If you need a custom route, custom controller, whatever you want,
 take over and let it be Symfony.
 
+[Learn more about to use Symfony with NumberNine...](/docs/architecture/symfony/)
+
 ## No configuration
 
-While installing, you'll be asked for the database name and user. That's all.
+Using NumberNine's installer, you won't have anything to configure.
 No yaml or php file to edit. Just launch your website, and you're good to go.
 
 What's more? NumberNine don't mess with Symfony configuration files.
@@ -61,7 +63,7 @@ in your app yaml files, it's Symfony after all!
 Like any CMS on the market, NumberNine features an extended user management system.
 It natively handles login, registration, roles and capabilities.
 
-[Learn more about user management...]()
+[Learn more about user management...](/docs/architecture/user-management/)
 
 ## Shortcodes as services
 

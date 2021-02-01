@@ -2,6 +2,7 @@
 description: 'Docker services'
 sidebar: 'docs'
 prev: '/docs/first-steps/'
+next: '/docs/architecture/overview/'
 ---
 
 # Docker services
