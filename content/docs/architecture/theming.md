@@ -2,6 +2,7 @@
 description: 'Theming'
 sidebar: 'docs'
 prev: '/docs/architecture/user-management/'
+next: '/docs/howto/theming/create-a-component/'
 ---
 
 # Theming
@@ -89,6 +90,11 @@ like this, but rendered with a dedicated template.
 
 Now what's interesting in NumberNine is that shortcodes are, just like components, **isolated micro-controllers
 running as services**.
+
+What more? Shortcodes are also meant to be page builder elements. Any shortcode you create can be easily
+integrated to the page builder without having to recompile admin source.
+
+[Learn how to create and use a shortcode...](/docs/howto/theming/create-a-shortcode/)
 
 ## Page builder
 

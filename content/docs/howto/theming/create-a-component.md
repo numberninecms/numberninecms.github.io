@@ -9,7 +9,7 @@ next: '/docs/howto/theming/create-a-shortcode/'
 
 To understand what are components, [read this section](/docs/architecture/theming/#components).
 
-## Configure the path where to store components
+## Configuration
 
 In your `config/packages/numbernine.yaml` file, configure the path where to store components.
 By default it's `src/Component/`, if this path suits you then skip this step.
