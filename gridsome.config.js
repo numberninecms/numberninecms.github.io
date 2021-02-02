@@ -51,6 +51,7 @@ module.exports = {
             title: 'How to',
             items: [
               '/docs/howto/theming/create-a-component/',
+              '/docs/howto/theming/create-a-shortcode/',
             ]
           },
         ]

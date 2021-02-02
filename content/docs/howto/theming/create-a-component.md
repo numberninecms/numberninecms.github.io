@@ -1,6 +1,8 @@
 ---
 description: 'Create a component'
 sidebar: 'docs'
+prev: '/docs/architecture/theming/'
+next: '/docs/howto/theming/create-a-shortcode/'
 ---
 
 # Create a component
@@ -31,11 +33,11 @@ You can create subfolders, for example `Post/PostAuthor`.
 
 A new folder is created with two files:
 
-* `YourComponent/YourComponent.php`
+* `MyComponent/MyComponent.php`
 
   This is the controller of the component template.
 
-* `YourComponent/template.html.php`
+* `MyComponent/template.html.php`
 
   This is the template.
 
@@ -44,7 +46,7 @@ A new folder is created with two files:
 To render the component, use this Twig function:
 
 ```twig
-{{ N9_component('YourComponent') }}
+{{ N9_component('MyComponent') }}
 ```
 
 ## Inject variables in a component
@@ -52,13 +54,13 @@ To render the component, use this Twig function:
 You can inject some variables from the parent template into your component:
 
 ```twig
-{{ N9_component('YourComponent', {example: 'string variable'}) }}
+{{ N9_component('MyComponent', {example: 'string variable'}) }}
 ```
 
 To catch it, your component need to implement the corresponding setter:
 
 ```php
-final class YourComponent implements ComponentInterface
+final class MyComponent implements ComponentInterface
 {
     private string $example;
     
@@ -77,7 +79,7 @@ Every component must implement `getTemplateParameters()` which returns an array 
 variables to the template.
 
 ```php
-final class YourComponent implements ComponentInterface
+final class MyComponent implements ComponentInterface
 {
     // ...
 
@@ -101,7 +103,7 @@ The Twig template can now use this variable:
 Every component is a service. This means you can use dependency injection like with any other service.
 
 ```php
-final class YourComponent implements ComponentInterface
+final class MyComponent implements ComponentInterface
 {
     public function __construct(
         EventDispatcherInterface $eventDispatcher

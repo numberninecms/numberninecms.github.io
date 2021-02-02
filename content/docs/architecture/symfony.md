@@ -14,7 +14,7 @@ That means that your app will be a project based on `symfony/website-skeleton` w
 a **clean folder structure** to start with.
 
 NumberNine automatically configures everything in the background, without altering your
-own configuration files. You can at anytime **overwrite any setting** like you usually do
+own configuration files. You can at anytime **override any setting** like you usually do
 with Symfony.
 
 Symfony's documentation is 100% valid for NumberNine, although you don't need to touch
