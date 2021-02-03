@@ -7,14 +7,14 @@ next: '/docs/screenshots/'
 # Introduction
 
 NumberNine is a full-featured CMS built with Symfony.
-It fills the gaps with the Symfony ecosystem which lacks super fast development for small to medium scale projects.
+It fills the gaps with the Symfony ecosystem which lacks **super fast development** for small to medium scale projects.
 
 Although small projects need little to no code, you will need to code if want to extend it for your specific business needs.
 
 If you don't know how to use Symfony, it's recommended that you [learn the framework](https://symfony.com/doc/current/index.html) if you want a better
 development experience with NumberNine.
 
-Else, you should be comfortable at least with knowing the following programming concepts:
+Otherwise, you should be comfortable at least with knowing the following programming concepts:
 * MVC
 * Routing
 * Dependency injection
@@ -47,7 +47,7 @@ don't include code that isn't yours. NumberNine gives you an empty `/src` direct
 You can still use Symfony the way you're used too. If you need a custom route, custom controller, whatever you want,
 take over and let it be Symfony.
 
-[Learn more about to use Symfony with NumberNine...](/docs/architecture/symfony/)
+[Learn more about how NumberNine complements Symfony...](/docs/architecture/symfony/)
 
 ## No configuration
 
@@ -65,7 +65,7 @@ It natively handles login, registration, roles and capabilities.
 
 [Learn more about user management...](/docs/architecture/user-management/)
 
-## Shortcodes as services
+## Shortcodes and components as services
 
 Extend your theme with business logic by creating new shortcodes.
 
@@ -73,7 +73,7 @@ In NumberNine, shortcodes are represented by text in the content of the page by 
 `[my_custom_shortcode]`.
 In your code, it's just a service class, where you can inject any dependency like you're used to.
 
-[Learn more about shortcodes...]()
+[Learn more about shortcodes and components...](/docs/architecture/theming/#components)
 
 ## Block presets
 
@@ -84,7 +84,9 @@ For instance, you can create several preconfigured headers from which your clien
 ## Theme overriding
 
 Any part of a theme is overridable in your `/src` directory, be it twig templates or shortcodes classes.
-This allows you to create very quickly child themes to give a unique feel to your project. 
+This allows you to create very quickly child themes to give a unique feel to your project.
+
+[Learn more about theming...](/docs/architecture/theming/)
 
 ## Event-driven lifecycle
 
@@ -96,6 +98,8 @@ their contents to adapt the software to your business needs.
 While creating your business entities, keep in mind you can extend NumberNine built-in publishing entities.
 Any entity that need to be displayed as its own can take advantage of NumberNine features, including
 its awesome page builder.
+
+[Learn more about content types...](/docs/architecture/content-types/)
 
 ## Page builder
 
