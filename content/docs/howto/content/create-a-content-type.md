@@ -89,9 +89,9 @@ Let's make a specific template. Create a file in `templates/theme/photo_gallery/
 {% endblock %}
 ```
 
-Done! All photo galleries will now be displayed using this template.
+**Done!** All photo galleries will now be displayed using this template.
 
-You can create even override this template for a particular gallery by creating:
+You can even override this template for a particular gallery by creating:
 * `templates/theme/photo_gallery/single_your-gallery-slug.html.twig`
 * `templates/theme/photo_gallery/single_125.html.twig` (change `125` with the ID)
 
