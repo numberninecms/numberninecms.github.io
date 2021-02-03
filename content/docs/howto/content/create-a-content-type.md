@@ -69,5 +69,68 @@ When you register a new content type, some capababilities are automatically gene
 To be able to edit a page, you'll have to go to the administration panel under `Users > Roles` and
 assign them to your roles. In our example, they're the ones that end by `_photo_galleries`.
 
-## Create a template
+## Create the template for a single entity
 
+By default, the template used by our new content type is `content/single.html.twig`.
+
+Let's make a specific template. Create a file in `templates/theme/photo_gallery/single.html.twig`:
+
+```twig
+{% extends N9_base_template() %}
+
+{% block body %}
+<div class="container standard-container">
+    <main class="page-main">
+        <h1 class="text-5xl font-thin mb-5">{{ entity.title }}</h1>
+        <div>This photo gallery was created on {{ entity.createdAt | date }}</div>
+        <div>{{ entity.content }}</div>
+    </main>
+</div>
+{% endblock %}
+```
+
+Done! All photo galleries will now be displayed using this template.
+
+You can create even override this template for a particular gallery by creating:
+* `templates/theme/photo_gallery/single_your-gallery-slug.html.twig`
+* `templates/theme/photo_gallery/single_125.html.twig` (change `125` with the ID)
+
+## Create the template of the index page
+
+Now we need an index page listing all our galleries, just like a blog feed.
+
+It will have a `page` content type but will a specific template.
+
+First, let's create the template. Our template will be a list of entities, so it have to be a `index.html.twig` file
+for NumberNine to know it needs a paginated collection.
+
+Create a file `templates/theme/photo_gallery/index.html.twig`:
+
+```twig
+{% extends N9_base_template() %}
+
+{% block body %}
+<div class="container standard-container">
+    <div class="grid grid-cols-4 gap-5 w-full">
+        <main class="blog-main col-span-3">
+            {% for photo_gallery in entities %}
+                <a href="{{ N9_entity_url(photo_gallery) }}">
+                    <h2 class="text-xl font-bold mb-5">{{ photo_gallery.title }}</h2>
+                </a>
+            {% endfor %}
+            {{ N9_shortcode('[pagination]') }}
+        </main>
+        <aside class="blog-sidebar">
+            {{ N9_area('blog_sidebar') }}
+        </aside>
+    </div>
+</div>
+{% endblock %}
+```
+
+You're almost done. In the administration panel, click `Pages > Add new` then go the the Classic Editor.
+
+On the right sidebar, choose from the template list "Photo galleries index page" that now appears as your
+template exists. Set status to `Publish` and save the page.
+
+**Done!** Visit your page to see the paginated list of galleries.
