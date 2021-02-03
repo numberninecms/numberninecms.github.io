@@ -45,6 +45,7 @@ module.exports = {
               '/docs/architecture/symfony/',
               '/docs/architecture/user-management/',
               '/docs/architecture/theming/',
+              '/docs/architecture/content-types/',
             ]
           },
           {
@@ -52,6 +53,8 @@ module.exports = {
             items: [
               '/docs/howto/theming/create-a-component/',
               '/docs/howto/theming/create-a-shortcode/',
+              '/docs/howto/content/create-a-content-type/',
+              '/docs/howto/user-management/create-a-capability/',
             ]
           },
         ]

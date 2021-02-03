@@ -2,7 +2,7 @@
 description: 'Theming'
 sidebar: 'docs'
 prev: '/docs/architecture/user-management/'
-next: '/docs/howto/theming/create-a-component/'
+next: '/docs/architecture/content-types/'
 ---
 
 # Theming
@@ -10,7 +10,7 @@ next: '/docs/howto/theming/create-a-component/'
 A NumberNine theme is a Symfony bundle that handles rendering of the website.
 Unless you choose another theme or build your own, the default theme is `ChapterOne`.
 
-Every template is overridable in your own `/templates` directory.
+Every template is overridable in your own `/templates/theme/` directory.
 
 ## ChapterOne
 
@@ -34,7 +34,7 @@ a product, a portfolio gallery, an architecture project.
 An entity page can have many templates, based on its [content type]().
 
 Here's how NumberNine knows which template to choose, sorted by highest priority to lowest.  
-Note that your `/templates/` directory has **greater priority** than theme's templates. This way
+Note that your `/templates/theme/` directory has **greater priority** than theme's templates. This way
 you can override any theme's template.
 
 * `content_type_name/single.custom_template.html.twig`
@@ -71,7 +71,7 @@ You don't have to use components if you don't want to.
 
 ## Shortcodes
 
-Also known as BBcodes, shortcodes are widely used in CMS softwares like WordPress or Drupal.
+Also known as BBcodes, shortcodes are widely used in CMS software like WordPress or Drupal.
 
 While the purpose of a component is purely developer-oriented, the shortcode is purely user-oriented.
 They are meant to give the opportunity to the end user, who doesn't know how to code, to customize
@@ -95,6 +95,3 @@ What more? Shortcodes are also meant to be page builder elements. Any shortcode 
 integrated to the page builder without having to recompile admin source.
 
 [Learn how to create and use a shortcode...](/docs/howto/theming/create-a-shortcode/)
-
-## Page builder
-
