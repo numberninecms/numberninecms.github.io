@@ -57,6 +57,12 @@ module.exports = {
               '/docs/howto/user-management/create-a-capability/',
             ]
           },
+          {
+            title: 'Reference',
+            items: [
+              '/docs/reference/events/',
+            ]
+          },
         ]
       }
     ]

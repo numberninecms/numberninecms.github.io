@@ -2,6 +2,7 @@
 description: 'Create a capability'
 sidebar: 'docs'
 prev: '/docs/howto/content/create-a-content-type/'
+next: '/docs/reference/events/'
 ---
 
 # Create a capability

@@ -95,3 +95,24 @@ What more? Shortcodes are also meant to be page builder elements. Any shortcode 
 integrated to the page builder without having to recompile admin source.
 
 [Learn how to create and use a shortcode...](/docs/howto/theming/create-a-shortcode/)
+
+## Areas
+
+A theme may contain areas. Areas are common to several pages and generally used in templates. They are
+editable through the page builder and are rendered as text in the database.
+
+A typical use of areas is the site header, the footer, a blog sidebar, etc.
+
+To make them editable and dynamic, they accept shortcodes. As an example, a blog sidebar may look like
+this:
+
+```
+[categories title="Categories"]
+[recent_posts title="Recent Posts" count="10"]
+```
+
+Obviously, the end-user won't have to write its sidebar this way, and will directly use the page
+builder like this:
+
+
+<img src="/screenshots/blog_sidebar_edition.gif" alt="NumberNine Blog Sidebar Edition Demo">
