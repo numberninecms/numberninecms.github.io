@@ -10,7 +10,7 @@
         <LayoutHeader />
       </header>
 
-      <main class="relative flex flex-wrap justify-start flex-1 w-full bg-ui-background px-5 lg:px-0">
+      <main class="relative flex flex-wrap justify-start flex-1 w-full bg-ui-background px-5">
 
         <aside
           v-if="hasSidebar"
