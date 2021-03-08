@@ -10,7 +10,7 @@
         <LayoutHeader />
       </header>
 
-      <main class="container relative flex flex-wrap justify-start flex-1 w-full bg-ui-background">
+      <main class="relative flex flex-wrap justify-start flex-1 w-full bg-ui-background">
 
         <aside
           v-if="hasSidebar"
@@ -25,7 +25,7 @@
 
         <div
           class="w-full pb-24"
-          :class="{'pl-0 lg:pl-12 lg:w-3/4': hasSidebar}"
+          :class="{'pl-0 lg:pl-12 lg:w-3/4 xl:w-5/6': hasSidebar}"
         >
           <slot />
         </div>
@@ -311,6 +311,11 @@ table {
 
   @screen lg {
     @apply w-1/4 px-0 bg-transparent top-0 bottom-auto inset-x-auto sticky z-0;
+    transform: translateX(0);
+  }
+
+  @screen xl {
+    @apply w-1/6 px-0 bg-transparent top-0 bottom-auto inset-x-auto sticky z-0;
     transform: translateX(0);
   }
 }

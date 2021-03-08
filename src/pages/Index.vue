@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="pt-8 md:pt-16">
+    <div class="pt-8 md:pt-16 container">
       <div class="flex flex-col items-center">
         <h1 class="flex flex-col items-center mb-2 text-ui-primary">
           <Logo :width="512" with-text />
