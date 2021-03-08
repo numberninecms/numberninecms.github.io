@@ -134,3 +134,107 @@ On the right sidebar, choose from the template list "Photo galleries index page"
 template exists. Set status to `Publish` and save the page.
 
 **Done!** Visit your page to see the paginated list of galleries.
+
+## Add new tabs to the admin classic editor
+
+### Defining extension fields
+
+Your new content type may come with some fields that you'd like to let the user define. As an example, our
+`photo_gallery` content type could add these new custom fields:
+
+* **Display type**: a select control to choose among `Grid` and `Masonry`
+* **Location**: a text input control
+* **Photographer name**: a text input control
+* **Date of shooting**: a calendar control
+
+First, create a class in `src/EditorExtension/PhotoGalleryEditorExtension.php`. Note that the namespace
+is not important, you can place this class wherever you want.
+
+```php
+namespace App\EditorExtension;
+
+use NumberNine\Model\Content\EditorExtensionBuilderInterface;
+use NumberNine\Model\Content\EditorExtensionInterface;
+use NumberNine\Model\PageBuilder\Control\DateControl;
+use NumberNine\Model\PageBuilder\Control\SelectControl;
+
+final class PhotoGalleryEditorExtension implements EditorExtensionInterface
+{
+    public function build(EditorExtensionBuilderInterface $builder): void
+    {
+        $builder
+            ->add('gallery_options', null, ['icon' => 'mdi-folder-multiple-image'])
+        ;
+
+        $galleryOptionsBuilder = $builder->getBuilder('gallery_options');
+        $galleryOptionsBuilder
+            ->add('display_type', SelectControl::class, [
+                'choices' => [
+                    'grid' => 'Grid',
+                    'masonry' => 'Masonry',
+                ],
+                'default' => 'grid',
+            ])
+            ->add('location')
+            ->add('photographer_name')
+            ->add('date_of_shooting', DateControl::class, ['default' => date('Y-m-d')])
+        ;
+    }
+}
+```
+
+Now you need to register it in your content type `src/EventSubscriber/ContentTypeRegistrationEventSubscriber.php`:
+
+```php
+
+use App\EditorExtension\PhotoGalleryEditorExtension;
+
+// ...
+
+public function register(ContentTypeRegistrationEvent $event): void
+{
+    $event->addContentType(
+        new ContentType(
+            [
+                // ...
+                'editor_extension' => PhotoGalleryEditorExtension::class,
+            ]
+        )
+    );
+}
+```
+
+**Done!** As a result, your admin now looks like this:
+
+<img src="/screenshots/admin_editor_extension_tab.jpg" alt="NumberNine admin editor extension">
+
+### Using extension fields
+
+Extension fields are nothing more than custom fields. They're stored with this format:
+`extension.name_of_the_tab.name_of_the_field`.
+
+In our example, we can display the date of shooting with:
+
+```twig
+{{ entity.getCustomField('extension.gallery_options.date_of_shooting') }}
+```
+
+## Add new sidebar components to the admin classic editor
+
+Sidebar components work exactly the same way as tabs do. To define a sidebar component, just
+change its type when adding it to the builder.
+
+```php
+final class PhotoGalleryEditorExtension implements EditorExtensionInterface
+{
+    public function build(EditorExtensionBuilderInterface $builder): void
+    {
+        $builder
+            ->add('gallery_sidebar_options', EditorExtensionBuilderInterface::COMPONENT_TYPE_SIDEBAR)
+        ;
+
+        $sidebarOptionsBuilder = $builder->getBuilder('gallery_sidebar_options');
+        // ...
+    }
+}
+```
