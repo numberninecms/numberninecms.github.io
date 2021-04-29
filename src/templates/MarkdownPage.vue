@@ -97,6 +97,10 @@ export default {
 <style>
 @import 'prism-themes/themes/prism-material-oceanic.css';
 
+code {
+  padding: 0;
+}
+
 code[class*="language-"], pre[class*="language-"] {
   font-size: 0.95em;
 }
