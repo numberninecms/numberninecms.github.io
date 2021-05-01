@@ -19,7 +19,7 @@ This is the list of the installed services.
 
 The PHP container is loaded with some useful extensions and development tools.
 
-* PHP 7.4
+* PHP 8.0
 * APCu
 * Xdebug 3
 * Composer 2
