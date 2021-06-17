@@ -70,6 +70,12 @@
         </div>
       </div>
 
+      <div class="pt-8 mx-auto mt-8 border-t md:mt-8 md:pt-8 border-top border-ui-border max-w-screen-sm"></div>
+
+      <div class="flex flex-col items-center justify-center -mx-4 gap-5">
+          <p>Thanks to <a href="https://jb.gg/OpenSource" target="_blank">JetBrains</a> for supporting this project.</p>
+          <a href="https://jb.gg/OpenSource" target="_blank"><img src="/jetbrains.png" alt="JetBrains"></a>
+      </div>
     </div>
   </Layout>
 </template>
