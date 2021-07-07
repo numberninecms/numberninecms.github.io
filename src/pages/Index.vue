@@ -10,12 +10,8 @@
         </span>
 
         <p class="pt-8 xl:w-3/4 lg:w-5/6 text-center">
-          NumberNine is a new generation CMS aimed to simplify the creation of websites with Symfony.
+          NumberNine is a new generation CMS aimed to simplify the creation of websites with Symfony.<br>
           Whatever website or application you're creating, this is the tool you've always wished for.
-        </p>
-
-        <p class="p-1 text-center bg-orange-600 text-white rounded inline-block font-bold">
-          ⚠ This project is still in pre-alpha state ⚠
         </p>
 
         <div class="flex justify-center mt-8">
@@ -32,6 +28,12 @@
           Open Source. MIT License.
         </p>
 
+        <div class="mt-5 flex flex-col justify-center">
+            <p class="mb-1 py-1 px-5 text-center bg-orange-300 text-orange-600 rounded inline-block font-semibold">
+                pre-alpha v0.1
+            </p>
+            <small class="text-gray-600 text-center">Things may break. Use with caution.</small>
+        </div>
       </div>
 
       <div class="pt-8 mx-auto mt-8 border-t md:mt-8 md:pt-8 border-top border-ui-border max-w-screen-sm"></div>
@@ -40,11 +42,12 @@
         <div class="flex flex-col items-center w-full px-4 mb-8 text-center md:w-1/3">
           <CodeIcon size="3x" class="mb-6 text-ui-primary" />
           <h3 class="font-bold tracking-wide uppercase text-ui-primary">
-            Top frameworks
+            Top technologies
           </h3>
           <p class="text-lg text-left">
-            Built with Symfony and Quasar, the two most powerful frameworks on the market. NumberNine CMS make them work together
-            to deliver the best user experience and robustness your website needs.
+            Built with Symfony, the most powerful PHP framework on the market, alongside with Stimulus and Vue 3
+            for the frontend to deliver the best user experience and robustness your website needs. Designed to be
+            simple, full featured and extensible.
           </p>
         </div>
 
@@ -55,7 +58,7 @@
           </h3>
           <p class="text-lg text-left">
             Create pages, blog articles or any content with the built-in page builder and its dozens of predesigned blocks.
-            Extend default theme to change the look and feel of the components. Make your blocks featuring your business objects.
+            Extend default theme to change the look and feel of the components. Build your blocks featuring your own business objects.
           </p>
         </div>
 
@@ -65,7 +68,8 @@
             Media library
           </h3>
           <p class="text-lg text-left">
-            A great media management tool is the key to productivity. Enjoy using the very reactive media library, with integrated image editing tools.
+            A great media management tool is the key to productivity. NumberNine's very reactive media library comes with integrated
+            image editing tools, dropzone upload, client-side image resizing before upload, and neat integration with the text editor.
           </p>
         </div>
       </div>

@@ -86,6 +86,13 @@ behavior.
 `RegistrationFormSuccessEvent` is dispatched when the registration is successful and the user logged in.
 NumberNine's default behavior is to listen to this even then notify the user by email.
 
+### HiddenCustomFieldsEvent
+`HiddenCustomFieldsEvent` allows you to hide custom fields in the content entity edition form. It's useful
+if you store some data in custom fields that you don't want the user to know about, or if these custom fields
+have a dedicated panel or card. As an example, a page template is stored as `page_template` custom field,
+but shown to the user as a card with a `select` form element. As the user should not have access to this
+custom field to modify it freely, it's hidden using this event.
+
 
 ## Registration events
 

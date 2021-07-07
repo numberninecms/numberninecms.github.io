@@ -17,7 +17,7 @@ module.exports = {
     github: 'https://github.com/numberninecms',
     nav: {
       links: [
-        { path: '/docs/', title: 'Docs' }
+        { path: '/docs/', title: 'Developer docs' }
       ]
     },
     sidebar: [
