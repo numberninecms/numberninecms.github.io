@@ -23,10 +23,10 @@ jobs:
             -   name: Install and build
                 run: |
                     yarn install
-                    yarn build
+                    yarn docs:build
 
             -   name: Deploy
                 uses: JamesIves/github-pages-deploy-action@4.1.0
                 with:
                     branch: publish
-                    folder: dist
+                    folder: docs/.vuepress/dist

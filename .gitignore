@@ -8,3 +8,4 @@ dist
 .env
 .env.*
 *.code-workspace
+.temp
