@@ -7,6 +7,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     title: 'NumberNine CMS',
     description: 'Documentation for NumberNine CMS',
     clientAppEnhanceFiles: path.resolve(__dirname, './clientAppEnhance.ts'),
+    head: [['link', { rel: 'icon', href: '/images/logo_square.png' }]],
     plugins: [
         [
             '@vuepress/search',
