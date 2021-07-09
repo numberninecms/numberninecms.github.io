@@ -1,0 +1,79 @@
+import { defineUserConfig } from 'vuepress';
+import type { DefaultThemeOptions } from 'vuepress';
+import { path } from '@vuepress/utils';
+
+export default defineUserConfig<DefaultThemeOptions>({
+    lang: 'en-US',
+    title: 'NumberNine CMS',
+    description: 'Documentation for NumberNine CMS',
+    clientAppEnhanceFiles: path.resolve(__dirname, './clientAppEnhance.ts'),
+    plugins: [
+        [
+            '@vuepress/search',
+            {
+                locales: {
+                    '/': {
+                        placeholder: 'Search',
+                    },
+                },
+            },
+        ],
+    ],
+
+    themeConfig: {
+        logo: './images/logo_square.png',
+        navbar: [
+            {
+                text: 'Developer docs',
+                link: '/developers/',
+            },
+        ],
+        sidebar: [
+            {
+                text: 'Introduction',
+                children: [
+                    '/developers/index.md',
+                    '/developers/features.md',
+                    '/developers/screenshots.md',
+                ],
+            },
+            {
+                text: 'Getting started',
+                children: [
+                    '/developers/installation.md',
+                    '/developers/first-steps.md',
+                ],
+            },
+            {
+                text: 'Tooling',
+                children: [
+                    '/developers/docker.md',
+                ],
+            },
+            {
+                text: 'Architecture',
+                children: [
+                    '/developers/architecture/symfony.md',
+                    '/developers/architecture/user-management.md',
+                    '/developers/architecture/theming.md',
+                    '/developers/architecture/content-types.md',
+                ],
+            },
+            {
+                text: 'How to',
+                children: [
+                    '/developers/howto/theming/create-a-component.md',
+                    '/developers/howto/theming/create-a-shortcode.md',
+                    '/developers/howto/content/create-a-content-type.md',
+                    '/developers/howto/user-management/create-a-capability.md',
+                ],
+            },
+            {
+                text: 'Reference',
+                children: [
+                    '/developers/reference/events.md',
+                ],
+            },
+        ],
+    },
+});
