@@ -1,5 +1,5 @@
-![NumberNine CMS - Every good business needs a good CMS software](./static/logo.png)
+![NumberNine CMS - Every good business needs a good CMS software](./docs/.vuepress/public/images/logo.png)
 
 Documentation for NumberNine CMS.
 
-Built with [Gridsome](https://gridsome.org/).
+Built with [VuePress 2](https://v2.vuepress.vuejs.org/).
