@@ -1,5 +1,5 @@
 ---
-prev: /developers/index.md
+prev: /developers/who-is-it-for.md
 next: /developers/screenshots.md
 ---
 
@@ -39,6 +39,7 @@ next: /developers/screenshots.md
 * Featured image
 * Shortcodes
 * Revisions history
+* One-to-many and many-to-many relationships between any content type
 * Page builder
   * Add content with pre-designed blocks
   * Design block presets
