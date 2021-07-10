@@ -19,10 +19,21 @@ export default defineUserConfig<DefaultThemeOptions>({
                 },
             },
         ],
+        [
+            '@vuepress/google-analytics',
+            {
+                id: 'G-NWXECCMZSK',
+            },
+        ],
     ],
 
     themeConfig: {
         logo: './images/logo_square.png',
+        repo: 'numberninecms/cms',
+        docsRepo: 'numberninecms/numberninecms.github.io',
+        docsBranch: 'master',
+        docsDir: 'docs',
+        contributors: false,
         navbar: [
             {
                 text: 'Developer docs',
@@ -34,6 +45,7 @@ export default defineUserConfig<DefaultThemeOptions>({
                 text: 'Introduction',
                 children: [
                     '/developers/index.md',
+                    '/developers/who-is-it-for.md',
                     '/developers/features.md',
                     '/developers/screenshots.md',
                 ],
