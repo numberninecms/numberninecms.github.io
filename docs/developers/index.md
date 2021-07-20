@@ -7,7 +7,7 @@ next: /developers/who-is-it-for.md
 NumberNine is a full-featured CMS built with Symfony.
 It fills the gaps with the Symfony ecosystem which lacks **super fast development** for small to medium scale projects.
 
-Although small projects need little to no code, you will need to code if want to extend it for your specific business needs.
+Although small projects using NumberNine would need little to no code, you will need to code if want to extend it for your specific business needs.
 
 If you don't know how to use Symfony, it's recommended that you [learn the framework](https://symfony.com/doc/current/index.html) if you want a better
 development experience with NumberNine.
@@ -19,8 +19,6 @@ Otherwise, you should be comfortable at least with knowing the following program
 * Event-driven programming
 * ORM
 
-If you need to extend the admin, you'll need Vue.js knowledge.
-
 ## Get started
 
 Please see [installation](/developers/installation.md) page for instructions on creating a new project or integrating NumberNine to an existing project.
@@ -29,11 +27,15 @@ Please see [installation](/developers/installation.md) page for instructions on 
 
 There seems to be no other free CMS that does what NumberNine does the way it does it.
 
-Most CMS forget the end-users and simple things can become a nightmare to accomplish.
+Some forget the end-users and simple things can become a nightmare to accomplish.
 Some forget the developers and build a whole new framework that needs to be learnt.
+Some aren't **free, open-source and self-hosted**.
+
+As end-users, we don't want to configure things with YAML, XML or any kind of configuration file.
+We want **plug-and-play** software. NumberNine is just that. Ready to use, with the best technology in its core.
 
 As developers, we don't want to learn a specific framework just to understand how to code a plugin, a theme or whatever.
-We know Symfony, we know Vue.js, that's all we need. NumberNine is nothing more than that.
+We know **Symfony**, that's all we need. NumberNine is nothing more than that.
 
 ## It's Symfony after all
 
@@ -50,11 +52,11 @@ take over and let it be Symfony.
 ## No configuration
 
 Using NumberNine's installer, you won't have anything to configure.
-No yaml or php file to edit. Just launch your website, and you're good to go.
+No YAML or PHP file to edit. Just launch your website, and you're good to go.
 
 What's more? NumberNine don't mess with Symfony configuration files.
 It automatically configures everything for you. If you need to change a setting, override it
-in your app yaml files, it's Symfony after all!
+in your app YAML files, it's Symfony after all!
 
 ## User management
 
@@ -103,3 +105,5 @@ its awesome page builder.
 
 With end-users in mind, NumberNine provides a page-builder which is easily extensible.
 Any custom shortcode you build will be injected into the page builder.
+
+[Learn more about creating shortcodes...](/developers/howto/theming/create-a-shortcode.md)

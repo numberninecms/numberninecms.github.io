@@ -60,12 +60,19 @@ next: /developers/screenshots.md
 * Theme chooser
 * Customize the site identity
 
+### Security
+
+* Built-in login, registration and password resetting forms
+* Firewall with login throttling using two filters for higher security
+* Argon2id passwords encryption
+
 
 ## For developers
 
 ### Technology
 
 * Built with Symfony 5, Stimulus and Vue 3
+* Compatible with PHP 8
 * Automatic creation of a full-featured Docker development environment
 
 ### Usage
@@ -80,7 +87,7 @@ next: /developers/screenshots.md
 * Split the view in many controllers with components
 * Components and shortcodes as services
 * Extensibility through events
-* High performance with Redis caching
+* High performance with Redis caching and optimized queries
 
 ### Content
 
@@ -101,5 +108,4 @@ next: /developers/screenshots.md
 
 ### Security
 
-* Built-in login, registration and password resetting logic
 * Create custom capabilities
