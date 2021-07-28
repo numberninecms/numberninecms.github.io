@@ -22,7 +22,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         [
             '@vuepress/google-analytics',
             {
-                id: 'G-NWXECCMZSK',
+                id: 'G-6P5RWPRLS2',
             },
         ],
     ],
