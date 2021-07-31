@@ -26,11 +26,7 @@ who can edit a post, etc.
 
 In the admin panel under `Users > Roles`, you can assign or remove permissions to each role:
 
-<a href="/images/screenshots/admin_users_roles.jpg" target="_blank" title="NumberNine Admin user roles">
-  <img src="/images/screenshots/small/admin_users_roles.jpg" alt="NumberNine Admin user roles">
-</a>
-
-<br>
+![Admin user roles](/images/screenshots/admin_users_roles.jpg)
 
 To create a new role, enter the name of the role you want to create and click the `+` button to create it.
 It will appear in a new column, you can then assign the permissions you want.

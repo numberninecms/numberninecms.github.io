@@ -52,7 +52,7 @@ It doesn't make sense to have an index page listing all existing pages.
 
 An object with `page` content type is based on `NumberNine\Entity\Post` entity.
 
-<a href="/screenshots/frontend_single_page.jpg" target="_blank" title="NumberNine Frontend single page">
+<a href="/images/screenshots/frontend_single_page.jpg" target="_blank" title="Frontend single page">
   View an example of a page...
 </a>
 
@@ -63,7 +63,7 @@ of a feed. By default, posts are featured in the blog, which is a paginated view
 
 An object with `post` content type is based on `NumberNine\Entity\Post` entity.
 
-<a href="/screenshots/frontend_single_post.jpg" target="_blank" title="NumberNine Frontend single post">
+<a href="/images/screenshots/frontend_single_post.jpg" target="_blank" title="Frontend single post">
   View an example of a post...
 </a>
 

@@ -21,7 +21,7 @@ docker run --rm --pull=always -t -e HOST_PWD=$PWD \
     numberninecms/installer myproject
 ```
 
-Wait a couple of minutes. Done! Now visit <a href="https://myproject.localhost/" target="_blank">https://myproject.localhost/</a>.
+Wait a couple of minutes. Done! Now visit [https://myproject.localhost/](https://myproject.localhost/).
 
 If port 443 is unavailable, the installation process will automatically assign a free port to your app.
 
@@ -67,4 +67,4 @@ symfony local:server:ca:install
 symfony serve -d
 ```
 
-You're done. Visit <a href="https://localhost:8080/" target="_blank">https://localhost:8080/</a> or the given URL if different.
+You're done. Visit [https://localhost:8080/](https://localhost:8080/) or the given URL if different.
