@@ -95,10 +95,10 @@ To each content type, you can assign one or many taxonomies.
 You'll access these content types on the left menu of the administration panel. Media files are handled differently
 inside the media library.
 
-<a href="/images/screenshots/admin_contententity_index.jpg" target="_blank" title="NumberNine Admin posts list">
-  <img src="/images/screenshots/small/admin_contententity_index.jpg" alt="NumberNine Admin posts list">
-</a>
+![Content Entities Index Page](/images/screenshots/admin_contententity_index.jpg)
 
 ## Add more content types
+
+You can also define your own content types with a few lines of code.
 
 [Learn how to create and use custom content types...](/developers/howto/content/create-a-content-type.md)
