@@ -21,7 +21,7 @@ Otherwise, you should be comfortable at least with knowing the following program
 
 ## Get started
 
-Please see [installation](/developers/installation.md) page for instructions on creating a new project or integrating NumberNine to an existing project.
+Please see [installation](/developers/installation.md) page for instructions on creating a new project.
 
 ## Why another CMS
 

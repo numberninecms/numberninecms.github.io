@@ -67,6 +67,13 @@ When you register a new content type, some capababilities are automatically gene
 To be able to edit a page, you'll have to go to the administration panel under `Users > Roles` and
 assign them to your roles. In our example, they're the ones that end by `_photo_galleries`.
 
+![Custom Content Type Capabilities Edition](/images/screenshots/howto_content_type_roles.jpg)
+
+At this point, you'll be able to create new photo galleries, as new menu items appeared.
+
+![Custom Content Type Menu](/images/screenshots/howto_content_type_menu.jpg)
+
+
 ## Create the template for a single entity
 
 By default, the template used by our new content type is `content/single.html.twig`.
@@ -129,7 +136,11 @@ Create a file `templates/theme/photo_gallery/index.html.twig`:
 You're almost done. In the administration panel, click `Pages > Add new` then go the the Classic Editor.
 
 On the right sidebar, choose from the template list "Photo galleries index page" that now appears as your
-template exists. Set status to `Publish` and save the page.
+template exists.
+
+![Custom Content Type Custom Template](/images/screenshots/howto_content_type_index_template.jpg)
+
+Set status to `Publish` and save the page.
 
 **Done!** Visit your page to see the paginated list of galleries.
 
@@ -145,43 +156,75 @@ Your new content type may come with some fields that you'd like to let the user 
 * **Photographer name**: a text input control
 * **Date of shooting**: a calendar control
 
-First, create a class in `src/EditorExtension/PhotoGalleryEditorExtension.php`. Note that the namespace
+First, let's create our custom form type. It's a regular [Symfony form type](https://symfony.com/doc/current/form/create_custom_field_type.html).
+Create a file `src/Form/PhotoGalleryType.php` and copy the code below.
+
+Make it extend `EditorExtensionType`, which will better integrate in the new tab visually, without label and extra padding.
+
+```php
+namespace App\Form;
+
+use NumberNine\Form\Type\EditorExtensionType;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\FormBuilderInterface;
+
+class PhotoGalleryType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options): void
+    {
+        $builder
+            ->add('display_mode', ChoiceType::class, [
+                'choices' => [
+                    'Grid' => 'grid',
+                    'Masonry' => 'masonry',
+                ],
+            ])
+            ->add('location', null, ['required' => false])
+            ->add('photographer_name', null, ['required' => false])
+            ->add('date_of_shooting', DateType::class, [
+                'widget' => 'single_text',
+                'input' => 'string',
+                'input_format' => 'Y-m-d',
+                'required' => false,
+            ])
+        ;
+    }
+
+    public function getParent(): string
+    {
+        return EditorExtensionType::class;
+    }
+}
+```
+
+Then we need to embed it. Create a class in `src/EditorExtension/PhotoGalleryEditorExtension.php`. Note that the namespace
 is not important, you can place this class wherever you want.
 
 ```php
-namespace App\EditorExtension;
+namespace App\Content\EditorForm;
 
+use App\Form\PhotoGalleryType;
 use NumberNine\Model\Content\EditorExtensionBuilderInterface;
 use NumberNine\Model\Content\EditorExtensionInterface;
-use NumberNine\Model\PageBuilder\Control\DateControl;
-use NumberNine\Model\PageBuilder\Control\SelectControl;
 
 final class PhotoGalleryEditorExtension implements EditorExtensionInterface
 {
     public function build(EditorExtensionBuilderInterface $builder): void
     {
         $builder
-            ->add('gallery_options', null, ['icon' => 'mdi-folder-multiple-image'])
-        ;
-
-        $galleryOptionsBuilder = $builder->getBuilder('gallery_options');
-        $galleryOptionsBuilder
-            ->add('display_type', SelectControl::class, [
-                'choices' => [
-                    'grid' => 'Grid',
-                    'masonry' => 'Masonry',
-                ],
-                'default' => 'grid',
-            ])
-            ->add('location')
-            ->add('photographer_name')
-            ->add('date_of_shooting', DateControl::class, ['default' => date('Y-m-d')])
+            ->add(
+                'gallery_options',
+                PhotoGalleryType::class,
+                ['icon' => 'mdi-folder-multiple-image'],
+            )
         ;
     }
 }
 ```
 
-Now you need to register it in your content type `src/EventSubscriber/ContentTypeRegistrationEventSubscriber.php`:
+Finally, modify `src/EventSubscriber/ContentTypeRegistrationEventSubscriber.php` to add the reference to this extension class:
 
 ```php
 
@@ -204,11 +247,11 @@ public function register(ContentTypeRegistrationEvent $event): void
 
 **Done!** As a result, your admin now looks like this:
 
-<img src="/images/screenshots/admin_editor_extension_tab.jpg" alt="NumberNine admin editor extension">
+![Custom Content Type Tab Form](/images/screenshots/howto_content_type_tab_form.jpg)
 
 ### Using extension fields
 
-Extension fields are nothing more than custom fields. They're stored with this format:
+Once your data is saved, it's transformed into custom fields. They're stored with this format:
 `extension.name_of_the_tab.name_of_the_field`.
 
 In our example, we can display the date of shooting with:
@@ -217,10 +260,17 @@ In our example, we can display the date of shooting with:
 {{ entity.getCustomField('extension.gallery_options.date_of_shooting') }}
 ```
 
+Or we can retrieve all fields of this extension with:
+
+```twig
+{% set fields = entity.getCustomFieldsStartingWith('extension.gallery_options.') %}
+```
+
 ## Add new sidebar components to the admin classic editor
 
-Sidebar components work exactly the same way as tabs do. To define a sidebar component, just
-change its type when adding it to the builder.
+Alternatively, you could want a sidebar card instead of a tab.
+
+Simple, just modify your `src/EditorExtension/PhotoGalleryEditorExtension.php` file like this:
 
 ```php
 final class PhotoGalleryEditorExtension implements EditorExtensionInterface
@@ -228,11 +278,18 @@ final class PhotoGalleryEditorExtension implements EditorExtensionInterface
     public function build(EditorExtensionBuilderInterface $builder): void
     {
         $builder
-            ->add('gallery_sidebar_options', EditorExtensionBuilderInterface::COMPONENT_TYPE_SIDEBAR)
+            ->add(
+                'gallery_options',
+                PhotoGalleryType::class,
+                ['icon' => 'mdi-folder-multiple-image'],
+                EditorExtensionBuilderInterface::COMPONENT_TYPE_SIDEBAR,
+            )
         ;
-
-        $sidebarOptionsBuilder = $builder->getBuilder('gallery_sidebar_options');
-        // ...
     }
 }
 ```
+
+**Done!** Check it out:
+
+![Custom Content Type Sidebar Form](/images/screenshots/howto_content_type_sidebar.jpg)
+
