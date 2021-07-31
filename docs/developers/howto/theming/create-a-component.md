@@ -61,7 +61,7 @@ To catch it, your component need to implement the corresponding setter:
 final class MyComponent implements ComponentInterface
 {
     private string $example;
-    
+
     public function setExample(string $example): void
     {
         $this->example = $example;
@@ -83,7 +83,7 @@ final class MyComponent implements ComponentInterface
 
     public function getTemplateParameters(): array
     {
-        return 
+        return [
             'example' => $this->example,
         ];
     }

@@ -174,7 +174,7 @@ to the end-user with a user friendly graphic interface.
 
 As an example, here's what our TurtleShortcode looks like in the page builder:
 
-<img src="/images/screenshots/turtle_shortcode.gif" alt="NumberNine TurtleShortcode demo">
+![Custom Shortcode Turtle Builder Demo](/images/screenshots/howto_shortcode_turtle_builder.gif)
 
 <br>
 
@@ -206,3 +206,13 @@ To avoid conflicting Twig and Vue syntax, embed Vue code into `{% verbatim %}...
 </div>
 {% endverbatim %}
 ```
+
+### Shortcode viewer
+
+You can at any time convert your page builder component to a text shortcode by selecting _**Show shortcode**_
+in the component context menu.
+
+Look at the example below:
+
+![Custom Shortcode Viewer](/images/screenshots/howto_shortcode_viewer.gif)
+
