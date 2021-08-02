@@ -15,6 +15,18 @@
                 {{ introductionText }}
             </p>
 
+            <div class="video-container">
+                <iframe
+                    width="800"
+                    height="450"
+                    src="https://www.youtube.com/embed/GcDZgwmVSSM"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+
             <p v-if="actions.length" class="actions">
                 <NavLink
                     v-for="action in actions"
@@ -212,5 +224,22 @@ export default defineComponent({
     .caption {
         color: var(--c-text-lightest);
     }
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 </style>
