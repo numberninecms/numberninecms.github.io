@@ -1,8 +1,11 @@
+@import '~@fortawesome/fontawesome-free/css/fontawesome.min.css';
+@import '~@fortawesome/fontawesome-free/css/brands.min.css';
+
 :root {
     // brand colors
     --c-brand: #46a6e9;
     --c-brand-light: #5eb4f1;
-  
+
     // background colors
     --c-bg: #ffffff;
     --c-bg-light: #f3f4f5;
@@ -16,10 +19,9 @@ html.dark {
     // brand colors
     --c-brand: #46a6e9;
     --c-brand-light: #5eb4f1;
-  
+
     // background colors
     --c-bg: #22262b;
     --c-bg-light: #282c31;
     --c-bg-lighter: #2e3338;
 }
-  
