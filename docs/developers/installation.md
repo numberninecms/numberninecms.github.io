@@ -30,7 +30,7 @@ If port 443 is unavailable, the installation process will automatically assign a
 
 **Requirements to install NumberNine:**
 
-* [PHP 7.4](https://www.php.net/downloads.php) or above
+* [PHP 7.4](https://www.php.net/downloads.php) or above, with `intl`, `gd`, `exif`, `sysvsem` extensions (`redis` too if you want to use redis)
 * [MySQL 8.0](https://www.mysql.com/downloads/) or above
 * [Composer 2](https://getcomposer.org/download/)
 * [Symfony executable](https://symfony.com/download)
@@ -40,10 +40,10 @@ If port 443 is unavailable, the installation process will automatically assign a
 To create a new project with NumberNine, run the following commands:
 
 ```bash
-symfony new my_project --full
+symfony new myproject --full
+cd myproject
 composer config extra.symfony.allow-contrib true
-SYMFONY_ENDPOINT=https://flex.symfony.com/r/github.com/symfony/recipes-contrib/1049 \
-    composer req numberninecms/numbernine
+composer req numberninecms/numbernine
 ```
 
 ### Launch installation
@@ -51,6 +51,7 @@ SYMFONY_ENDPOINT=https://flex.symfony.com/r/github.com/symfony/recipes-contrib/1
 Go to your new project root and run:
 
 ```bash
+bin/console assets:install public --symlink
 bin/console numbernine:install
 bin/console doctrine:database:create
 bin/console doctrine:migrations:diff
@@ -68,3 +69,21 @@ symfony serve -d
 ```
 
 You're done. Visit [https://localhost:8080/](https://localhost:8080/) or the given URL if different.
+
+
+### Optional: Redis extension
+
+Assuming you've got Redis installed, run these commands:
+
+```bash
+composer req numberninecms/redis
+bin/console numbernine:install:redis
+```
+
+Answer the questions, then clear your Symfony cache:
+
+```bash
+bin/console cache:clear
+```
+
+Done! Your Symfony cache and sessions will now be handled through Redis.
