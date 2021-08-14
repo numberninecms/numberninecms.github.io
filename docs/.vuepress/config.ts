@@ -39,6 +39,10 @@ export default defineUserConfig<DefaultThemeOptions>({
                 text: 'Developer docs',
                 link: '/developers/',
             },
+            {
+                text: 'Blog',
+                link: 'https://dev.to/numberninecms',
+            },
         ],
         sidebar: [
             {
