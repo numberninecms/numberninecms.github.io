@@ -3,7 +3,7 @@ prev: /developers/docker.md
 next: /developers/architecture/user-management.md
 ---
 
-# Symfony 5.3+
+# Symfony 5.4+
 
 ## Vanilla project
 

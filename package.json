@@ -6,10 +6,10 @@
   "author": "William Arin <williamarin.dev@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
-    "@vuepress/plugin-google-analytics": "^2.0.0-beta.21",
-    "@vuepress/plugin-search": "^2.0.0-beta.21",
-    "vuepress": "^2.0.0-beta.21"
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.26",
+    "@vuepress/plugin-search": "^2.0.0-beta.26",
+    "vuepress": "^2.0.0-beta.26"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",

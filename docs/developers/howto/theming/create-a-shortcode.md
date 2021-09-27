@@ -76,9 +76,7 @@ Every shortcode must implement `configureParameters()` and `processParameters()`
 Editable shortcodes, those who are available in the page builder, must implement `buildPageBuilderForm()` from `EditableShortcodeInterface`.
 
 ```php
-/**
- * @Shortcode(name="turtle", label="Turtle", icon="mdi-turtle")
- */
+#[Shortcode(name:"turtle", label:"Turtle", icon:"mdi-turtle")]
 final class TurtleShortcode implements
     ShortcodeInterface,
     EditableShortcodeInterface
@@ -109,9 +107,9 @@ final class TurtleShortcode implements
 }
 ```
 
-### Shortcode annotation
+### Shortcode attribute
 
-Every shortcode must have the `@Shortcode` annotation to specify the name that the
+Every shortcode must have the `#[Shortcode]` attribute to specify the name that the
 end-user will use. In our example, we want the shortcode to be called with `[turtle]`,
 therefore the name we'll give is `turtle`.
 

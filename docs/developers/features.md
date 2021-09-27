@@ -71,8 +71,8 @@ next: /developers/screenshots.md
 
 ### Technology
 
-* Built with Symfony 5, Stimulus and Vue 3
-* Compatible with PHP 8
+* Built with Symfony 5.4+, Stimulus and Vue 3
+* Runs on PHP 8.1 and above
 * Automatic creation of a full-featured Docker development environment
 
 ### Usage
