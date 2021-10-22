@@ -1,6 +1,6 @@
 ---
 prev: /developers/who-is-it-for.md
-next: /developers/screenshots.md
+next: /developers/demo.md
 ---
 
 # Features

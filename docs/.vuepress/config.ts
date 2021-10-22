@@ -40,6 +40,10 @@ export default defineUserConfig<DefaultThemeOptions>({
                 link: '/developers/',
             },
             {
+                text: 'Demo',
+                link: '/developers/demo.md',
+            },
+            {
                 text: 'Blog',
                 link: 'https://dev.to/numberninecms',
             },
@@ -51,6 +55,7 @@ export default defineUserConfig<DefaultThemeOptions>({
                     '/developers/index.md',
                     '/developers/who-is-it-for.md',
                     '/developers/features.md',
+                    '/developers/demo.md',
                     '/developers/screenshots.md',
                 ],
             },

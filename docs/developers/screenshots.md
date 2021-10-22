@@ -1,5 +1,5 @@
 ---
-prev: /developers/features.md
+prev: /developers/demo.md
 next: /developers/installation.md
 ---
 
