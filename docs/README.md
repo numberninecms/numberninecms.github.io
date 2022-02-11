@@ -9,7 +9,7 @@ introductionText:
     NumberNine is a new generation CMS aimed to simplify the creation of websites with Symfony.
     Whatever website or application you're creating, this is the tool you've always wished for.
 license: Open Source. MIT License.
-version: v0.3
+version: v0.4
 caption: Things may break. Use with caution.
 
 actions:
