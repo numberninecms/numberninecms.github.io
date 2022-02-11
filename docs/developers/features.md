@@ -71,7 +71,7 @@ next: /developers/demo.md
 
 ### Technology
 
-* Built with Symfony 5.4+, Stimulus and Vue 3
+* Built with Symfony 6.0+, Stimulus and Vue 3
 * Runs on PHP 8.1 and above
 * Automatic creation of a full-featured Docker development environment
 

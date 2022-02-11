@@ -42,7 +42,7 @@ _**Note:** PHP 8.1 is not yet released but you can download it through [Homebrew
 To create a new project with NumberNine, run the following commands:
 
 ```bash
-symfony new myproject --full --version="5.4.x-dev"
+symfony new myproject --full
 cd myproject
 composer config extra.symfony.allow-contrib true
 composer req numberninecms/numbernine
