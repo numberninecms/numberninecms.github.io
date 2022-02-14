@@ -35,8 +35,6 @@ If port 443 is unavailable, the installation process will automatically assign a
 * [Composer 2](https://getcomposer.org/download/)
 * [Symfony executable](https://symfony.com/download)
 
-_**Note:** PHP 8.1 is not yet released but you can download it through [Homebrew](https://github.com/shivammathur/homebrew-php) for instance._
-
 ### Create the project
 
 To create a new project with NumberNine, run the following commands:

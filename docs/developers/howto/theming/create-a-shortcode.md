@@ -21,7 +21,7 @@ numbernine:
 
 Run this command in your terminal:
 ```
-docker-compose exec php bin/console numbernine:make:shortcode
+docker compose exec php bin/console numbernine:make:shortcode
 ```
 
 You'll be asked several questions. For demonstration purpose, we'll use default values in the

@@ -28,20 +28,20 @@ The PHP container is loaded with some useful extensions and development tools.
 
 Connect to the container using this command:
 ```
-docker-compose exec php bash
+docker compose exec php bash
 ```
 
 You'll see a bash prompt inside which you can run Symfony or Cachetool commands. Type `exit` to return to your terminal session.
 
 Alternatively, if you just want to run a single command, use this syntax:
 ```
-docker-compose exec php [here the Linux command you want to run]
+docker compose exec php [here the Linux command you want to run]
 ```
 For example:
 ```
-docker-compose exec php bin/console list
-docker-compose exec php composer update
-docker-compose exec php cachetool opcache:status
+docker compose exec php bin/console list
+docker compose exec php composer update
+docker compose exec php cachetool opcache:status
 ```
 
 ## Nginx
@@ -88,7 +88,7 @@ and you're ready to profile your website.
 
 Symfony sessions and app cache is stored in a Redis database. If you need to clear the Redis cache, run this command:
 ```
-docker-compose exec redis redis-cli flushall
+docker compose exec redis redis-cli flushall
 ```
 
 ## Maildev

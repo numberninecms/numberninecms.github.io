@@ -21,7 +21,7 @@ numbernine:
 
 Run this command in your terminal:
 ```
-docker-compose exec php bin/console numbernine:make:component
+docker compose exec php bin/console numbernine:make:component
 ```
 
 You'll be asked for a component name, enter the name you want.
