@@ -1,6 +1,6 @@
 ---
 prev: /developers/howto/content/create-a-content-type.md
-next: /developers/reference/events.md
+next: /developers/howto/user-management/create-a-built-in-role.md
 ---
 
 # Create a capability

@@ -88,6 +88,7 @@ export default defineUserConfig<DefaultThemeOptions>({
                     '/developers/howto/theming/create-a-shortcode.md',
                     '/developers/howto/content/create-a-content-type.md',
                     '/developers/howto/user-management/create-a-capability.md',
+                    '/developers/howto/user-management/create-a-built-in-role.md',
                 ],
             },
             {
