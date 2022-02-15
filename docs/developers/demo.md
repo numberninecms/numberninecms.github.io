@@ -7,7 +7,7 @@ next: /developers/screenshots.md
 
 This is the official demo website for NumberNine CMS.
 
-You don't need to install it on your machine to have a glance of its features. Edit the content as much as you want: all data will be reset every 15 minutes.
+You don't need to install it on your machine to have a glance at its features. Edit the content as much as you want: all data will be reset every 15 minutes.
 
 ## Frontend access
 
