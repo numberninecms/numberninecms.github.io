@@ -28,7 +28,7 @@
             </div>
 
             <p v-if="actions.length" class="actions">
-                <NavLink
+                <AutoLink
                     v-for="action in actions"
                     :key="action.text"
                     class="action-button"
@@ -79,14 +79,14 @@ import {
 } from "@vuepress/client";
 import { isArray } from "@vuepress/shared";
 import type { DefaultThemeHomePageFrontmatter } from "@vuepress/theme-default/lib/shared";
-import NavLink from "@vuepress/theme-default/lib/client/components/NavLink.vue";
+import AutoLink from "@vuepress/theme-default/lib/client/components/AutoLink.vue";
 import { LocalThemeHomePageFrontmatter } from "../home";
 
 export default defineComponent({
     name: "Home",
 
     components: {
-        NavLink,
+        AutoLink,
     },
 
     setup() {
