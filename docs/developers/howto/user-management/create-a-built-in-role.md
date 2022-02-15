@@ -1,6 +1,6 @@
 ---
 prev: /developers/howto/user-management/create-a-capability.md
-next: /developers/reference/events.md
+next: /developers/howto/user-management/extend-registration-form.md
 ---
 
 # Create a built-in role
