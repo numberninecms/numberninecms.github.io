@@ -1,33 +1,32 @@
-import { defineUserConfig } from 'vuepress';
-import type { DefaultThemeOptions } from 'vuepress';
-import { path } from '@vuepress/utils';
+import { defineUserConfig, viteBundler } from 'vuepress';
+import { defaultTheme } from '@vuepress/theme-default';
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
+import { searchPlugin } from '@vuepress/plugin-search';
+import { getDirname, path } from '@vuepress/utils';
 
-export default defineUserConfig<DefaultThemeOptions>({
+const __dirname = getDirname(import.meta.url);
+
+export default defineUserConfig({
     lang: 'en-US',
     title: 'NumberNine CMS',
     description: 'Documentation for NumberNine CMS',
-    clientAppEnhanceFiles: path.resolve(__dirname, './clientAppEnhance.ts'),
-    head: [['link', { rel: 'icon', href: '/images/logo_square.png' }]],
+    head: [
+        ['link', { rel: 'icon', href: '/images/logo_square.png' }],
+        ['link', { rel: 'stylesheet', href: '/images/logo_square.png' }],
+    ],
     plugins: [
-        [
-            '@vuepress/search',
-            {
-                locales: {
-                    '/': {
-                        placeholder: 'Search',
-                    },
+        searchPlugin({
+            locales: {
+                '/': {
+                    placeholder: 'Search',
                 },
             },
-        ],
-        [
-            '@vuepress/google-analytics',
-            {
-                id: 'G-6P5RWPRLS2',
-            },
-        ],
+        }),
+        googleAnalyticsPlugin({
+            id: 'G-6P5RWPRLS2',
+        }),
     ],
-
-    themeConfig: {
+    theme: defaultTheme({
         logo: './images/logo_square.png',
         repo: 'numberninecms/cms',
         docsRepo: 'numberninecms/numberninecms.github.io',
@@ -99,5 +98,8 @@ export default defineUserConfig<DefaultThemeOptions>({
                 ],
             },
         ],
+    }),
+    alias: {
+        '@theme/HomeHero.vue': path.resolve(__dirname, './components/HomeHero.vue'),
     },
 });

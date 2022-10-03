@@ -1,15 +1,16 @@
 {
   "name": "numberninecms-docs",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Documentation for NumberNine CMS",
   "main": "index.js",
   "author": "William Arin <williamarin.dev@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
-    "@vuepress/plugin-google-analytics": "^2.0.0-beta.26",
-    "@vuepress/plugin-search": "^2.0.0-beta.26",
-    "vuepress": "^2.0.0-beta.26"
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.51",
+    "@vuepress/plugin-search": "^2.0.0-beta.51",
+    "postcss-import": "^15.0.0",
+    "vuepress": "^2.0.0-beta.51"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",

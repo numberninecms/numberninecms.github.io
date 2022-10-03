@@ -1,6 +1,5 @@
 ---
 home: true
-layout: HomeLayout
 heroImage: /images/logo.png
 heroAlt: NumberNine CMS
 heroText: null
@@ -37,16 +36,14 @@ features:
 footer:
     <div style="display:flex; gap:1rem; justify-content:center; margin-bottom:3rem">
         <a href="https://twitter.com/numberninecms" rel="noopener noreferrer nofollow" target="_blank">
-            <i class="fab fa-twitter fa-2x"></i>
+            <i class="fa-brands fa-twitter fa-2x"></i>
         </a>
         <a href="https://www.youtube.com/channel/UC6fc1mG9yWQ9yoYR1MgqR7w" rel="noopener noreferrer nofollow" target="_blank">
-            <i class="fab fa-youtube fa-2x"></i>
+            <i class="fa-brands fa-youtube fa-2x"></i>
         </a>
         <a href="https://www.facebook.com/NumberNine-CMS-110230494642598/" rel="noopener noreferrer nofollow" target="_blank">
-            <i class="fab fa-facebook fa-2x"></i>
+            <i class="fa-brands fa-facebook fa-2x"></i>
         </a>
     </div>
-    <p>Thanks to <a href="https://jb.gg/OpenSource" target="_blank">JetBrains</a> for supporting this project.</p>
-    <a href="https://jb.gg/OpenSource" target="_blank"><img src="/images/jetbrains.png" alt="JetBrains"></a>
 footerHtml: true
 ---
