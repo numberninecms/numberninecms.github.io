@@ -60,6 +60,12 @@ final class ContentTypeRegistrationEventSubscriber implements EventSubscriberInt
 }
 ```
 
+::: tip
+To create a content type based on a custom Doctrine entity class, you'll need to:
+* Make your entity extend `\NumberNine\Entity\ContentEntity` and remove the `id` column if it's beed added by `make:entity`
+* Make your repository extend `\NumberNine\Repository\AbstractContentEntityRepository`
+:::
+
 ## Assign capabilities to roles
 
 When you register a new content type, some capababilities are automatically generated.
