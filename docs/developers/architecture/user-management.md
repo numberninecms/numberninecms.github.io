@@ -38,7 +38,7 @@ Only user created roles can be removed.
 In your controller which extends `Symfony\Bundle\FrameworkBundle\Controller\AbstractController`,
 add a line such as:
 
-```php
+```php:no-line-numbers
 $this->denyAccessUnlessGranted(Capabilities::READ, $entity);
 ```
 

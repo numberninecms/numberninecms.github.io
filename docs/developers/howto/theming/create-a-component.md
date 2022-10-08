@@ -20,7 +20,7 @@ numbernine:
 ## Using CLI
 
 Run this command in your terminal:
-```
+```bash:no-line-numbers
 docker compose exec php bin/console numbernine:make:component
 ```
 
@@ -43,7 +43,7 @@ A new folder is created with two files:
 
 To render the component, use this Twig function:
 
-```twig
+```twig:no-line-numbers
 {{ N9_component('MyComponent') }}
 ```
 
@@ -51,7 +51,7 @@ To render the component, use this Twig function:
 
 You can inject some variables from the parent template into your component:
 
-```twig
+```twig:no-line-numbers
 {{ N9_component('MyComponent', {example: 'string variable'}) }}
 ```
 
@@ -92,7 +92,7 @@ final class MyComponent implements ComponentInterface
 
 The Twig template can now use this variable:
 
-```twig
+```twig:no-line-numbers
 <p>Displaying custom variable: {{ example }}.</p>
 ```
 

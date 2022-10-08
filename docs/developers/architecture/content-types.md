@@ -86,9 +86,13 @@ EXIF data, etc.
 
 ## Taxonomies
 
-To each content type, you can assign one or many taxonomies.
+To each content type, you can assign one or many taxonomies. A **taxonomy** is a "classification of something", such
+as a category, a tag, a color, an animal species.
 
-[Learn more about taxonomies...]()
+A taxonomy is then composed of **terms**, such as _Travel_, _Food_, _Lifestyle_ for a `category` taxonomy, or
+_green_, _blue_, _red_ for a `color` taxonomy.
+
+[Learn how to create and use taxonomies...](/developers/howto/content/create-a-taxonomy.md)
 
 ## In the administration panel
 

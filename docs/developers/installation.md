@@ -15,9 +15,9 @@ Just [download and install it](https://www.docker.com/products/docker-desktop).
 
 To create a new project, simply replace `myproject` by the name of your project and run:
 
-```bash
-docker run --rm --pull=always -t -e HOST_PWD=$PWD \
-    -v $PWD:/srv/app -v /var/run/docker.sock:/var/run/docker.sock \
+```bash:no-line-numbers
+docker run --rm --pull=always -t -e HOST_PWD="$PWD" \
+    -v "$PWD":/srv/app -v /var/run/docker.sock:/var/run/docker.sock \
     numberninecms/installer myproject
 ```
 
@@ -39,7 +39,7 @@ If port 443 is unavailable, the installation process will automatically assign a
 
 To create a new project with NumberNine, run the following commands:
 
-```bash
+```bash:no-line-numbers
 symfony new myproject --full
 cd myproject
 composer config extra.symfony.allow-contrib true
@@ -50,7 +50,7 @@ composer req numberninecms/numbernine
 
 Go to your new project root and run:
 
-```bash
+```bash:no-line-numbers
 bin/console assets:install public --symlink
 bin/console numbernine:install
 bin/console doctrine:database:create
@@ -63,7 +63,7 @@ bin/console doctrine:fixtures:load
 
 Now launch the local server and visit your website.
 
-```bash
+```bash:no-line-numbers
 symfony local:server:ca:install
 symfony serve -d
 ```
@@ -75,14 +75,14 @@ You're done. Visit [https://localhost:8080/](https://localhost:8080/) or the giv
 
 Assuming you've got Redis installed, run these commands:
 
-```bash
+```bash:no-line-numbers
 composer req numberninecms/redis
 bin/console numbernine:install:redis
 ```
 
 Answer the questions, then clear your Symfony cache:
 
-```bash
+```bash:no-line-numbers
 bin/console cache:clear
 ```
 

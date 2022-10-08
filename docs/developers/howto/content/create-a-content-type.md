@@ -205,8 +205,7 @@ class PhotoGalleryType extends AbstractType
 }
 ```
 
-Then we need to embed it. Create a class in `src/EditorExtension/PhotoGalleryEditorExtension.php`. Note that the namespace
-is not important, you can place this class wherever you want.
+Then we need to embed it. Create a class in `src/EditorExtension/PhotoGalleryEditorExtension.php`.
 
 ```php
 namespace App\Content\EditorForm;
@@ -229,6 +228,10 @@ final class PhotoGalleryEditorExtension implements EditorExtensionInterface
     }
 }
 ```
+
+::: tip
+The namespace of your extension is not important, you can place this class wherever you want.
+:::
 
 Finally, modify `src/EventSubscriber/ContentTypeRegistrationEventSubscriber.php` to add the reference to this extension class:
 
@@ -262,13 +265,13 @@ Once your data is saved, it's transformed into custom fields. They're stored wit
 
 In our example, we can display the date of shooting with:
 
-```twig
+```twig:no-line-numbers
 {{ entity.getCustomField('extension.gallery_options.date_of_shooting') }}
 ```
 
 Or we can retrieve all fields of this extension with:
 
-```twig
+```twig:no-line-numbers
 {% set fields = entity.getCustomFieldsStartingWith('extension.gallery_options.') %}
 ```
 

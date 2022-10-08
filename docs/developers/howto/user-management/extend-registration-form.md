@@ -113,9 +113,11 @@ final class RegistrationFormSuccessEventSubscriber implements EventSubscriberInt
 }
 ```
 
-**Note**: if you change something in the `$user` entity and persist it, you'll need to reauthenticate. To authenticate the user, inject `NumberNine\Security\UserAuthenticator` service and retrieve the new response:
+::: warning
+If you change something in the `$user` entity and persist it, you'll need to reauthenticate. To authenticate the user, inject `NumberNine\Security\UserAuthenticator` service and retrieve the new response:
 
 ```php
 $response = $this->authenticator->authenticateUser($user);
 $event->setReponse($response);
 ```
+:::

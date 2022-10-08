@@ -12,8 +12,6 @@ Every template is overridable in your own `/templates/theme/` directory.
 
 ## ChapterOne
 
-_**Note: ChapterOne is still under active development. Features below may not be all implemented yet.**_
-
 ChapterOne is a full featured theme for NumberNine that features the following:
 
 * TailwindCSS
@@ -21,6 +19,10 @@ ChapterOne is a full featured theme for NumberNine that features the following:
 * Hundreds of pre-designed blocks editable in the page builder
 * Configurable base colors
 * Several page templates (full width, no header, left sidebar, right sidebar, etc.)
+
+::: danger IMPORTANT NOTE
+ChapterOne is still under development. Features above may not be all implemented yet.
+:::
 
 ## Page templates
 
@@ -31,7 +33,7 @@ a product, a portfolio gallery, an architecture project.
 
 An entity page can have many templates, based on its [content type]().
 
-Here's how NumberNine knows which template to choose, sorted by highest priority to lowest.  
+Here's how NumberNine knows which template to choose, sorted by highest priority to lowest.
 Note that your `/templates/theme/` directory has **greater priority** than theme's templates. This way
 you can override any theme's template.
 
@@ -49,9 +51,9 @@ you can override any theme's template.
   This template will be selected if your entity ID is 214.
 
 * `content/single.html.twig`
-  
+
   A generic template that all content types fallback to.
-  
+
 
 In the above examples, `content_type_name` can be `post`, `page`, `product` or any other content type that you create.
 
@@ -77,7 +79,7 @@ its website pages with dynamic components represented by a text string.
 
 As an example, a user could type the following text in the page editor:
 
-```
+```:no-line-numbers
 What a great day today in Paris.
 [weather location="Paris"]
 ```
@@ -104,7 +106,7 @@ A typical use of areas is the site header, the footer, a blog sidebar, etc.
 To make them editable and dynamic, they accept shortcodes. As an example, a blog sidebar may look like
 this:
 
-```
+```:no-line-numbers
 [categories title="Categories"]
 [recent_posts title="Recent Posts" count="10"]
 ```

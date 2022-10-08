@@ -20,7 +20,7 @@ numbernine:
 ## Using CLI
 
 Run this command in your terminal:
-```
+```bash:no-line-numbers
 docker compose exec php bin/console numbernine:make:shortcode
 ```
 
@@ -54,7 +54,8 @@ To render the shortcode, use this Twig function:
 
 If you don't specify the parameters, the shortcode defaults values will be used instead.
 
-Note that this function doesn't necessarily take only one shortcode. You can pass it a full text with any
+::: tip
+This function doesn't necessarily take only one shortcode. You can pass it a full text with any
 number of shortcodes, even nested shortcodes, and it will render everything:
 
 ```twig
@@ -64,6 +65,7 @@ number of shortcodes, even nested shortcodes, and it will render everything:
     'And some more text.'
 ) }}
 ```
+:::
 
 ## The shortcode class
 
@@ -174,15 +176,15 @@ As an example, here's what our TurtleShortcode looks like in the page builder:
 
 ![Custom Shortcode Turtle Builder Demo](/images/screenshots/howto_shortcode_turtle_builder.gif)
 
-<br>
-
 This is made possible with the other template: `TurtleShortcode/template.vue.html`.
 This template is a portion of a Vue component, so it's using Vue syntax.
 
 You're only given access to the template of the component and not the script, which is automated.
 
-Note that you don't have to recompile the javascript assets to make it work. It's compiled on-the-fly
+::: tip NOTE
+You don't have to recompile the javascript assets to make it work. It's compiled on-the-fly
 while loading the page builder.
+:::
 
 ### Considerations
 
