@@ -1,5 +1,5 @@
 ---
-prev: /developers/howto/content/create-a-content-type.md
+prev: /developers/howto/content/create-a-taxonomy.md
 next: /developers/howto/user-management/create-a-built-in-role.md
 ---
 

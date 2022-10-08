@@ -23,12 +23,27 @@ use NumberNine\Security\CapabilityGenerator;
 
 final class UserRoleFixtures extends Fixture implements FixtureGroupInterface
 {
-    public function __construct(private CapabilityGenerator $capabilityGenerator)
-    {
+    public function __construct(
+        private readonly UserRoleRepository $userRoleRepository,
+        private readonly CapabilityGenerator $capabilityGenerator,
+    ) {
     }
 
     public function load(ObjectManager $manager): void
     {
+        $this->createTeacher($manager);
+
+        // add as many roles as you need here
+
+        $manager->flush();
+    }
+
+    private function createTeacher(ObjectManager $manager): void
+    {
+        if ($this->userRoleRepository->findOneByName('Teacher')) {
+            return;
+        }
+
         $teacher = (new UserRole())
             ->setName('Teacher')
             ->setLocked(true) // Locked roles can't be removed in the admin interface
@@ -61,11 +76,7 @@ final class UserRoleFixtures extends Fixture implements FixtureGroupInterface
             )
         ;
 
-        // add as many roles as you need here
-
-        // and persist them all in database
         $manager->persist($teacher);
-        $manager->flush();
     }
 
     public static function getGroups(): array
@@ -83,4 +94,6 @@ To manually load them on an existing project, run the command below.
 docker compose exec php bin/console doctrine:fixtures:load --append --group=app
 ```
 
+::: tip
 If you're not using Docker, strip the `docker compose exec php` part.
+:::

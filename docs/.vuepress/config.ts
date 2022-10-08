@@ -86,6 +86,7 @@ export default defineUserConfig({
                     '/developers/howto/theming/create-a-component.md',
                     '/developers/howto/theming/create-a-shortcode.md',
                     '/developers/howto/content/create-a-content-type.md',
+                    '/developers/howto/content/create-a-taxonomy.md',
                     '/developers/howto/user-management/create-a-capability.md',
                     '/developers/howto/user-management/create-a-built-in-role.md',
                     '/developers/howto/user-management/extend-registration-form.md',

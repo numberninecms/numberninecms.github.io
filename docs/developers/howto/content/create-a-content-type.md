@@ -1,6 +1,6 @@
 ---
 prev: /developers/howto/theming/create-a-shortcode.md
-next: /developers/howto/user-management/create-a-capability.md
+next: /developers/howto/content/create-a-taxonomy.md
 ---
 
 # Create a content type
